@@ -2,7 +2,7 @@
 
 ## Project Description
 
-**DWH Project** is a comprehensive **Data Warehouse** solution designed to centralize, integrate, and manage data from multiple sources. This project provides a robust infrastructure for collecting, transforming, and storing data in a structured data warehouse environment.
+**DWH Project** is a comprehensive **Data Warehouse** solution designed to consolidate, clean, and integrate disparate data from **CRM** and **ERP** systems into a centralized analytical platform. Built from scratch using **PostgreSQL and PL/pgSQL**, this project transforms raw, messy transactional records into structured, business-ready data models optimized for Business Intelligence (BI) and reporting..
 
 ### What is This?
 
@@ -15,11 +15,11 @@ A modern data warehouse system built with **PL/pgSQL** that enables organization
 ### What We Do
 
 We provide:
-- ✅ **Data Integration** - Seamless integration of multi-source data
-- ✅ **Data Transformation** - ETL/ELT pipelines for data processing
-- ✅ **Data Modeling** - Structured dimensional and fact tables
-- ✅ **Data Quality** - Validation and cleansing processes
-- ✅ **Scalable Architecture** - Built for enterprise-level data operations
+- **Medallion Architecture** - Implemented structured data progression across **Bronze (Raw)**, **Silver (Cleansed)**, and **Gold (Analytics-Ready)** layers.
+- **Data Transformation & Cleansing** - Handled null values, standardized codes, resolved overlapping historical dates (**Slowly Changing Dimensions - SCD**), and performed deduplication using **Window Functions**.
+- **Dimensional Modeling** - Designed a scalable **Star Schema** with robust Fact and Dimension tables utilizing system-generated **Surrogate Keys**.
+- **Automated ETL/ELT Pipelines** - Developed idempotent **PL/pgSQL Stored Procedures** with comprehensive error handling (`EXCEPTION` blocks) and load duration monitoring.
+- **Data Quality Assurance** - Formulated automated SQL test validation scripts to enforce primary key uniqueness and referential integrity.
 
 ---
 
@@ -52,25 +52,25 @@ dwh-project/
 
 ### System Architecture
 
-The following diagram illustrates the overall architecture of the DWH Project:
+The high-level architecture illustrating data extraction, multi-layer processing in PostgreSQL, and analytics consumption:
 
 ![Architecture Diagram](docs/Architecture.png)
 
-### Data Flow
+### Data Flow & Lineage
 
-This diagram shows how data flows through the system:
+The lineage diagram mapping how data transforms and flows from raw source files to final analytical views:
 
 ![Data Flow Diagram](docs/Data%20Flow.png)
 
 ### Data Integration Pattern
 
-The integration pattern used in this project:
+The integration model demonstrating how customer and product records from separate CRM and ERP systems are merged:
 
 ![Data Integration Diagram](docs/Data%20Intregration.png)
 
-### Data Model
+### Data Model (Star Schema)
 
-The dimensional model and schema design:
+The logical data model optimized for ad-hoc SQL queries and BI dashboards:
 
 ![Data Model Diagram](docs/Data%20Model.png)
 
@@ -80,6 +80,7 @@ The dimensional model and schema design:
 
 - **Database**: PostgreSQL with PL/pgSQL
 - **Language**: PL/pgSQL for stored procedures and functions
+- **Design & Diagramming** LucidChart
 - **License**: MIT
 
 ---
@@ -88,7 +89,7 @@ The dimensional model and schema design:
 
 ### Prerequisites
 
-- PostgreSQL 12 or higher
+- PostgreSQL 12+
 - Git for version control
 
 ### Setup
@@ -153,15 +154,21 @@ Contributions are welcome! Please feel free to submit pull requests or open issu
 
 ## Acknowledgments
 
-This project was built as part of my data engineering portfolio, following the industry-proven architectural guidelines and end-to-end framework taught by **Baraa Zini**.
+This project was built as a core asset for my Data Engineering portfolio. The foundational architecture and domain requirements were guided by the comprehensive data warehouse framework taught by **Baraa**.
 
 **Original Tutorial**: [SQL Data Warehouse from Scratch | Full Hands-On Data Engineering Project by Data with Baraa](https://www.youtube.com/c/DatawithBaraa)
+
+**Key Adaptation**: Re-engineered and migrated the entire project architecture, DDLs, and ETL pipelines from Microsoft SQL Server (T-SQL) to PostgreSQL (PL/pgSQL).
+
 
 ---
 
 ## Contact & Support
 
 For questions or support, please reach out to the project maintainers or open an issue in the repository.
+
+- **GitHub**: [YummieGG](https://github.com/YummieGG)
+- **Email**: mummycza9997@gmail.com
 
 ---
 

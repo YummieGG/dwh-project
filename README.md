@@ -34,7 +34,6 @@ dwh-project/
 ├── docs/                    # Project documentation and diagrams
 ├── datasets/               # Sample and raw datasets
 ├── scripts/                # ETL and database scripts
-├── tests/                  # Test cases and validations
 ├── LICENSE                 # MIT License
 └── README.md              # This file
 ```

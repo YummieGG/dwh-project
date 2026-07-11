@@ -1,4 +1,4 @@
-# DWH Project (DataWareHouse Project)
+# DWH Project
 
 ## Project Description
 
@@ -15,11 +15,11 @@ A modern data warehouse system built with **PL/pgSQL** that enables organization
 ### What We Do
 
 We provide:
-- **Data Integration** - Seamless integration of multi-source data
-- **Data Transformation** - ETL/ELT pipelines for data processing
-- **Data Modeling** - Structured dimensional and fact tables
-- **Data Quality** - Validation and cleansing processes
-- **Scalable Architecture** - Built for enterprise-level data operations
+- ✅ **Data Integration** - Seamless integration of multi-source data
+- ✅ **Data Transformation** - ETL/ELT pipelines for data processing
+- ✅ **Data Modeling** - Structured dimensional and fact tables
+- ✅ **Data Quality** - Validation and cleansing processes
+- ✅ **Scalable Architecture** - Built for enterprise-level data operations
 
 ---
 
@@ -31,12 +31,12 @@ The DWH Project follows a modular architecture composed of:
 
 ```
 dwh-project/
-├── docs/                   # Project documentation and diagrams
+├── docs/                    # Project documentation and diagrams
 ├── datasets/               # Sample and raw datasets
 ├── scripts/                # ETL and database scripts
 ├── tests/                  # Test cases and validations
 ├── LICENSE                 # MIT License
-└── README.md               # This file
+└── README.md              # This file
 ```
 
 ### Key Components
@@ -82,6 +82,32 @@ The dimensional model and schema design:
 - **Language**: PL/pgSQL for stored procedures and functions
 - **License**: MIT
 
+---
+
+## Getting Started
+
+### Prerequisites
+
+- PostgreSQL 12 or higher
+- Git for version control
+
+### Setup
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/YummieGG/dwh-project.git
+   cd dwh-project
+   ```
+
+2. Review the documentation in the `docs/` folder for detailed architecture information.
+
+3. Execute scripts from the `scripts/` folder to set up your data warehouse:
+   ```bash
+   # Run database initialization scripts
+   psql -U postgres -d your_database -f scripts/setup.sql
+   ```
+
+---
 
 ## Project Structure Details
 
@@ -110,5 +136,33 @@ Visual and detailed documentation including:
 - Data flow diagrams
 - Integration patterns
 - Data models and schema design
+
+---
+
+## License
+
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit pull requests or open issues for bugs and feature requests.
+
+---
+
+## Acknowledgments
+
+This project was built as part of my data engineering portfolio, following the industry-proven architectural guidelines and end-to-end framework taught by **Baraa Zini**.
+
+**Original Tutorial**: [SQL Data Warehouse from Scratch | Full Hands-On Data Engineering Project by Data with Baraa](https://www.youtube.com/c/DatawithBaraa)
+
+---
+
+## Contact & Support
+
+For questions or support, please reach out to the project maintainers or open an issue in the repository.
+
+---
 
 **Last Updated**: July 2026
